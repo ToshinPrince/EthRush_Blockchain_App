@@ -1,3 +1,4 @@
+//SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.0;
 
 contract Transactions {
@@ -6,7 +7,7 @@ contract Transactions {
     event Transfer(
         address from,
         address receiver,
-        unit amount,
+        uint amount,
         string message,
         uint256 timeStamp,
         string keyword
@@ -22,4 +23,14 @@ contract Transactions {
     }
 
     TransferStruct[] transactions;
+
+    function addTransaction() public {}
+
+    function getAllTransaction()
+        public
+        view
+        returns (TransferStruct[] memory)
+    {}
+
+    function getTransactionCOunt() public view returns (uint256) {}
 }
